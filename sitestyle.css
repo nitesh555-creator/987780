@@ -1,0 +1,192 @@
+/* Reset default browser padding and margin for consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the entire body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; 
+  color: #000; /* Text color */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full-height body */
+  opacity: 0; /* Start invisible for fade-in effect */
+  animation: fadeInPage 1.5s forwards ease-in; /* Fade-in page */
+}
+
+/* Header styling */
+header {
+  background-color: #ffffff; /* White background */
+  padding: 20px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Navigation bar */
+header nav {
+  display: flex;
+  justify-content: center; /* Center the navigation */
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 20px;
+  font-size: 1.2em;
+  position: relative;
+  padding: 10px 0;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #005f99;
+  transition: width 0.3s ease, background-color 0.3s ease; /* Animation for border */
+}
+
+header nav a:hover::after {
+  width: 100%; /* Expand underline from center */
+}
+
+/* Content section styling */
+.content {
+  flex-grow: 1; /* Makes the content area expand to fill available space */
+  text-align: center;
+  padding: 50px;
+}
+
+.content h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 10px 0;
+  width: 60%;
+  margin: 0 auto; /* Center the text block */
+}
+
+/* Hover effect on links and buttons */
+.content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #005f99;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content a:hover {
+  background-color: #003366; /* Darker blue on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adding shadow effect on hover */
+}
+
+/* Footer styling */
+.footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+  font-size: 1.2em;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center;     /* Center the text vertically */
+}
+
+/* Logo positioning */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.logo-container img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Smooth rotation */
+}
+
+.logo-container img:hover {
+  transform: rotate(360deg); /* Full rotation on hover */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  header nav a {
+    margin: 0 10px;
+    font-size: 1em;
+  }
+
+  .content h1 {
+    font-size: 2.5em;
+  }
+
+  .content p {
+    font-size: 1.1em;
+  }
+
+  .logo-container {
+    top: 10px;
+    right: 10px;
+  }
+
+  .logo-container img {
+    width: 120px; /* Smaller logo for mobile */
+  }
+} /* <-- Closing the media query here */
+
+/* Slider container */
+.slider {
+  position: relative;
+  max-width: 100%; /* Full width */
+  margin: auto;
+  overflow: hidden; /* Hide overflow */
+  height: 400px; /* Fixed height for the slider */
+}
+
+/* Slide container */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each slide takes full width */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Force all images to have the same size */
+.slide img {
+  width: 100%; /* Full width of the container */
+  height: 400px; /* Fixed height */
+  object-fit: cover; /* Crop the image to fit the container without distortion */
+}

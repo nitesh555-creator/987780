@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boat Info - Aqua Marina</title>
+<link rel="stylesheet" href="sitestyle.css">
+  <style>
+    
+    /* Flexbox container to position text on the left and image on the right */
+    .boat-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .boat-info .text {
+      width: 50%; /* Give 50% width to the text */
+      text-align: left;
+    }
+
+    .boat-info .text h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .boat-info .text p {
+      font-size: 1.2em;
+    }
+
+    .boat-info .image {
+      width: 50%; /* Give 50% width to the image */
+    }
+
+    .boat-info .image img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #000;
+    }
+
+ 
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="boat hire.html">Boat Hire</a>
+    <a href="contact us.html">Contact Us</a>
+    <a href="more.html">More</a>
+  </nav>
+
+  <div class="logo-container">
+    <img src="logo.png" alt="Aqua Marina Logo">
+  </div>
+</header>
+
+<div class="content">
+  <h1>Fishing</h1>
+
+
+
+  <div class="boat-info">
+    <!-- Content on the left -->
+    <div class="text">
+     
+      <strong><p>NO FISHING LICENCE REQUIRED</p></strong><br>
+<p>Licensed for up to 3 people to fish at any time</p>
+<p>Children do not require a <strong>fishing licence</strong> for children in NSW</p>
+<p>We sell tackle, fishing rods, reels and frozen bait.</p><br>
+<strong><p>Hiring fishing rod: $15</p></strong>
+    </div>
+
+    <!-- Image on the right -->
+    <div class="image">
+      <img src="fishing.jpg" alt="Small boat">
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>"Experience the Water, Your Way"</p>
+  </div>
+
+</body>
+</html>

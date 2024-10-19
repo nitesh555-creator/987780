@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boat Info - Aqua Marina</title>
+<link rel="stylesheet" href="sitestyle.css">
+  <style>
+
+    /* Flexbox container to position text on the left and image on the right */
+    .boat-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .boat-info .text {
+      width: 45%; /* Give 45% width to the text */
+      text-align: left;
+    }
+
+    .boat-info .text h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .boat-info .text p {
+      font-size: 1.2em;
+    }
+
+    .boat-info .image {
+      width: 50%; /* Give 50% width to the image */
+    }
+
+    .boat-info .image img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #000;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="boat hire.html">Boat Hire</a>
+    <a href="contact us.html">Contact Us</a>
+    <a href="more.html">More</a>
+  </nav>
+
+  <div class="logo-container">
+    <img src="logo.png" alt="Aqua Marina Logo">
+  </div>
+</header>
+
+<div class="content">
+  <h1>Small boat</h1>
+
+
+
+  <div class="boat-info">
+    <!-- Content on the left -->
+    <div class="text">
+     
+      <p>This small boat is licensed upto 4 people. It is suited for wandering around the river and also fishing. It includes one tank of fuel and all safety measures. A map of river is also provided so that people can spot the places for fishing and public toilets.</p>
+    </div>
+
+    <!-- Image on the right -->
+    <div class="image">
+      <img src="smallboat.png" alt="Small boat">
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>"Experience the Water, Your Way"</p>
+  </div>
+
+</body>
+</html>
