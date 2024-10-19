@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Aqua Marina</title>
+  <link rel="stylesheet" href="sitestyle.css"> <!-- Link to the external CSS file -->
+
+  <style>
+    /* Additional styles for the contact page */
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 900px; /* Reducing the overall width */
+      margin: 0 auto; /* Center the container */
+      padding: 50px 20px; /* Adding padding for smaller devices */
+    }
+
+    .contact-details {
+      width: 50%;
+      text-align: justify; /* Justifying the text content */
+    }
+
+    .contact-details h1 {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .contact-details p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    .map {
+      width: 45%; /* Adjusting map width */
+    }
+
+    .map iframe {
+      width: 100%; /* Using full width of the container */
+      height: 300px;
+      border: none;
+    }
+
+    /* Full-width Slider container */
+    .slider {
+      position: relative;
+      width: 100vw; /* Full viewport width */
+      margin: 0 auto;
+      overflow: hidden;
+      height: 300px; /* Fixed height for the slider */
+    }
+
+    /* Slide container */
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 300%; /* Set to 300% for 3 slides (adjust based on the number of slides) */
+    }
+
+    /* Each slide takes full viewport width */
+    .slide {
+      min-width: 100vw; /* Each slide takes full viewport width */
+      box-sizing: border-box;
+    }
+
+    /* Force all images to have the same size */
+    .slide img {
+      width: 100vw; /* Full viewport width */
+      height: 300px; /* Fixed height */
+      object-fit: cover; /* Ensure the image fits without distortion */
+    }
+
+    /* Navigation arrows */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="boat hire.html">Boat Hire</a> 
+      <a href="contact.html">Contact Us</a>
+      <a href="more.html">More</a>
+    </nav>
+    <div class="logo-container">
+      <img src="logo.png" alt="Aqua Marina Logo">
+    </div>
+  </header>
+
+
+ <!-- Slider Section -->
+  <div class="slider">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <img src="smallboat.png" alt="Slide 1">
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="peddalboat.png" alt="Slide 2">
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="12photoon.png" alt="Slide 3">
+      </div>
+    </div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <div class="contact-details">
+      <h1>Contact</h1><br><br>
+      <p><strong>Address:</strong><br>
+        4 Russell Street, Strathfield</p>
+      <p><strong>Phone:</strong> 0406303475</p>
+      <p><strong>Opening hours:</strong><br>
+        Mon-Sun 8am to 4pm</p>
+    </div>
+
+    <div class="map">
+      <!-- Embedded Google Map -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.738645682291!2d151.08777667646248!3d-33.88315832646482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb21bdbca68b%3A0xc169b6f0bb1fe39c!2s4%20Russell%20St%2C%20Strathfield%20NSW%202137%2C%20Australia!5e0!3m2!1sen!2sau!4v1695938301234!5m2!1sen!2sau" allowfullscreen title="Map of 4 Russell Street, Strathfield"></iframe>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>"Experience the Water, Your Way"</p>
+  </footer>
+
+  <!-- Link to external JavaScript -->
+  <script src="slider.js"></script>
+
+</body>
+</html>
